@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { I18nManager, StyleSheet, Text, View } from 'react-native';
+import CartItem from './components/CartItem';
 export default function App() {
+  
+  I18nManager.allowRTL(false)
+  I18nManager.forceRTL(false)
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <CartItem/>
       <StatusBar style="auto" />
     </View>
   );
